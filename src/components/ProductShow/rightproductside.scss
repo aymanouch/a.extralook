@@ -1,0 +1,257 @@
+@import "../../app.scss";
+.mybtn {
+  background: $scondary_color;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 16px 32px;
+  font-size: $links-size;
+  font-family: $font_family;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    background-color: #087df1;
+  }
+}
+.right-side__product {
+  position: relative;
+  font-family: $font_family;
+  .text-behind {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 6em;
+    color: $primary_color;
+    text-transform: uppercase;
+    opacity: 0.15;
+    margin-top: -25%;
+    z-index: -1;
+    width:100%;
+      overflow: hidden;
+  }
+  .small-text__first {
+    h3 {
+      color: $scondary_color;
+      text-transform: uppercase;
+      font-size: $links-size;
+    }
+  }
+  .title-big {
+    h1 {
+      color: $primary_color;
+      font-size: $title_size;
+      font-weight: bolder;
+      padding: 16px 0;
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+  .stars {
+    padding: 24px 0 16px 0;
+  }
+  .product-key {
+    color: $text_color;
+  }
+  .colors-product {
+    padding: 16px 0;
+    span {
+      display: inline-block;
+      border: 8px solid #fff;
+      width: 90px;
+      height: 20px;
+      background: orange;
+      border-radius: 3px;
+      margin-right: 4px;
+    }
+  }
+  .price-product {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 24px;
+    align-items: center;
+    padding: 32px 0;
+    color: $primary_color;
+    span {
+      color: $text-color;
+    }
+  }
+  .demande-btn {
+    padding: 24px 0;
+    .wraper-container {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  .description-product {
+    padding: 64px 64px 64px 0;
+    p {
+      color: $text-color;
+    }
+  }
+}
+@media only screen and (max-width: $phone-size) {
+  .right-side__product {
+    .demande-btn {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      background: #fff;
+      padding: 24px 0;
+      border-radius: 30px 30px 20px 0;
+      text-align: center;
+    }
+    .wraper-input {
+      h2 {
+        margin: 16px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+      }
+      div {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+        &.img {
+          width: 100px;
+          height: 100px;
+          img {
+            max-width: 100%;
+          }
+        }
+        .error-span {
+          color: rgb(189, 40, 40);
+        }
+        input {
+          width: 100%;
+          padding: 12px 8px;
+          &.product,
+          &.price {
+            font-weight: bolder;
+            text-align: center;
+            border: none;
+            outline: none;
+            margin-bottom: 0;
+            padding: 0;
+            font-size: 1.5em;
+            color: $scondary_color;
+          }
+        }
+      }
+      .close-btn_demande {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        cursor: pointer;
+        width: auto;
+        span {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: $phone-size) {
+  .desktop-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    width: 80%;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    .wraper-input {
+      text-align: end;
+      h2 {
+        margin: 16px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        text-align: center;
+        font-family: $font_family;
+      }
+      div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+        &.img {
+          width: 100px;
+          height: 100px;
+          img {
+            max-width: 100%;
+          }
+        }
+        .error-span {
+          color: rgb(189, 40, 40);
+        }
+        input {
+          width: 100%;
+          padding: 12px 8px;
+          font-size: 1.2em;
+          &.product,
+          &.price {
+            font-weight: bolder;
+            text-align: center;
+            border: none;
+            outline: none;
+            margin-bottom: 0;
+            padding: 0;
+            font-size: 1.5em;
+            color: $scondary_color;
+          }
+        }
+      }
+      .close-btn_demande {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        cursor: pointer;
+        width: auto;
+        span {
+          font-size: 2em;
+        }
+      }
+      button {
+        margin-right: 73px;
+      }
+    }
+    .form-img {
+      font-family: $font_family;
+      font-size: 2.2em;
+      display: grid;
+      align-content: center;
+      padding-left: 80px;
+      h1 {
+        span {
+          display: inline-block;
+          color: $scondary_color;
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        li {
+          a span {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 8px;
+          }
+          &:first-child a span {
+            background: rgb(13, 73, 168);
+          }
+          &:last-child a span {
+            background: rgb(223, 29, 148);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import "../../app.scss";
+#navbar {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  .first-side__navbar {
+    display: grid;
+    grid-template-columns: auto auto;
+    .navbar-controle {
+      display: none;
+    }
+  }
+  ul {
+    color: $primary_color;
+    font-family: $font_family;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    li {
+      font-size: $links-size;
+      span.material-icons {
+        transform: translateY(25%);
+      }
+      input {
+        border: none;
+        outline: none;
+        background: $primary_background;
+        padding-left: 8px;
+        font-size: $text_size;
+      }
+    }
+    &.last-side__form {
+      grid-template-columns: 50% auto auto;
+      justify-content: end;
+      grid-column-gap: 32px;
+    }
+  }
+  #logo{
+    img {
+      max-width: 70px;
+    }
+  }
+}
+
+@media only screen and (max-width: $phone-size) {
+  #navbar {
+    grid-template-columns: auto;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    background: $primary_background;
+    .first-side__navbar {
+      grid-template-columns: auto;
+      .logo__navbar {
+        height: 50px;
+      }
+      .navbar-controle {
+        display: block;
+        position: absolute;
+        right: 7%;
+        top: 2%;
+        cursor: pointer;
+        span {
+          font-size: $icons_size;
+        }
+      }
+    }
+    ul {
+      grid-template-columns: auto;
+      &.last-side__form {
+        grid-template-columns: auto;
+        justify-content: center;
+      }
+      li {
+        height: 50px;
+        text-align: center;
+        line-height: center;
+        cursor: pointer;
+        line-height: 50px;
+        input {
+          overflow: hidden;
+          transition: width 0.5s ease-in;
+          &.hide-input {
+            width: 0;
+          }
+          &.show-input {
+            width: 90%;
+          }
+        }
+        .search-icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &.show-navbar {
+    height: 100vh;
+  }
+  &.hide-navbar {
+    height: 50px;
+  }
+}

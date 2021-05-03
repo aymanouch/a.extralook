@@ -1,0 +1,13 @@
+@import "../../app.scss";
+.product-show {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 64px;
+}
+
+@media only screen and (max-width: $phone-size) {
+  .product-show {
+    grid-template-columns: 100%;
+    overflow: hidden;
+  }
+}

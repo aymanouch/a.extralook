@@ -1,0 +1,41 @@
+@import '../../app.scss';
+.information_sell{
+    padding-top:80px;
+    padding-bottom:80px;
+    ul{
+        display:flex;
+        list-style:none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        li{
+            
+            text-align: center;
+            font-family: $font_family;
+            color:$scondary_color;
+            img{
+                max-width:100%;
+                max-height: 100%;
+                width:100px;
+                display: inline-block;
+                margin:auto;
+            }
+            div{
+                padding:16px 0;
+                h2{
+                    margin:12px 0;
+                }
+                p{
+                    color:$primary_color;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:$phone-size) {
+    .information_sell{
+        ul{
+            justify-content: center;
+            gap:20px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "information":[
+         {
+             "name":"delivery",
+             "description":"free delivery to your home"
+         },
+         {
+            "name":"contact",
+            "description":"you can contact us anytime"
+        },
+        {
+            "name":"cash",
+            "description":"pay when you take your product"
+        }
+    ]
+}
