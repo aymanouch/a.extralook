@@ -30,7 +30,7 @@ function FormDemande(props) {
             <input type="text" placeholder="phone" name="phone" className="phone" id="phone-number"/>
             <br /><span id="error_phone" className="error-span"></span>
         </div>
-        <button className="mybtn" onClick={(e) => {submitData(e, product.name, product.price.raw)}}>acheter</button>
+        <button className="mybtn" onClick={(e) => {submitData(e, product.name, product.price.raw, props.handleClicl2)}}>acheter</button>
     </form>
 </div>);
 }
@@ -152,7 +152,7 @@ function detecteScroll() {
     
 }
 //create the funtion send data to the google sheets
-function submitData(e, product, price) {
+function submitData(e, product, price, funnyFun) {
     e.preventDefault();
     //the elements
     const fullname = document.getElementById("fullname"),
@@ -169,11 +169,12 @@ function submitData(e, product, price) {
 }).then(res =>{
 	if (res.status === 201){
         // SUCCESS
-        console.log("the data sending")
+        funnyFun();
+        return true;
 	}
 	else{
         // ERROR
-        console.log("you have a error")
+        return false;
 	}
 });
     }
